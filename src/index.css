@@ -1,0 +1,16 @@
+@import url('./Styles/mainStyle.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html,body{
+     font-family: "Manrope", sans-serif;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

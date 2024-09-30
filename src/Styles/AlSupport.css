@@ -1,0 +1,389 @@
+.BAckendAiBg {
+  background-image: url("../Assets/images/Bg-BAckendAi.png");
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin-top: 70px; */
+}
+.BESPOKE {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+  text-align: justify;
+  color: #fff;
+  padding-top: 36px;
+}
+.paraBackendAi {
+  padding-top: 36px !important;
+}
+
+
+ol, ul, menu{
+  margin: none !important ;
+  padding: none !important;
+}
+
+button.btnExplore {
+  background: rgba(255, 255, 255, 1);
+  color: black;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 800;
+  text-align: center;
+  border-radius: 6px;
+  width: 19%;
+  padding: 1rem 0.5rem;
+}
+
+.exploreBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 70px 0px;
+}
+.arrowImg {
+  width: 9%;
+  height: 9%;
+}
+.arrowImg img {
+  width: 100%;
+}
+.ourExperHd {
+  text-decoration: none !important;
+  text-align: center !important;
+  font-size: 40px !important;
+}
+
+.expertiesCard {
+  width: 100%;
+  /* height: 592px; */
+  padding: 48px 25px;
+  /* border-radius: 16px; */
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.cardConatiner {
+  /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+  display: grid;
+  /* display: flex; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* gap: 40px; */
+  /* padding-top: 5%; */
+  background-color: white;
+}
+.cardHd {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  font-family: "Manrope", sans-serif;
+  color: black;
+  text-align: start;
+  margin: 20px 0px;
+}
+
+.content_card {
+  background-color: #f2f3f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 50px;
+  width: 100%;
+}
+
+.cardPara {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: start;
+  font-family: "Manrope", sans-serif;
+  color: black;
+  /* color: rgba(255, 255, 255, 1); */
+}
+
+.cardList {
+  /* margin-left: 1rem; */
+  /* background-color: white; */
+  background: rgb(78, 91, 104);
+  background: linear-gradient(
+    0deg,
+    rgba(78, 91, 104, 1) 0%,
+    rgba(155, 123, 142, 1) 100%
+  );
+  width: 55%;
+  padding: 130px 10px;
+  /* padding: 100px 15px; */
+}
+
+.cardList_h3 {
+  font-size: 22px;
+  color: white;
+  /* padding: 0px 80px; */
+  border: 2px solid white;
+  border-radius: 20px;
+  /* min-width: 200px; */
+  margin: 10px 0px;
+  /* width: 320px; */
+  text-align: center;
+  border: 1px solid #ffffff80;
+  background: transparent;
+}
+
+.expertiesCardreverse {
+  width: 100%;
+  padding: 48px 25px;
+  /* border-radius: 16px; */
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 24px;
+}
+
+.HowitHD {
+  padding-top: 70px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 72px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  font-family: "Manrope", sans-serif;
+  color: black;
+}
+
+.main_how_it_works_container {
+  background: #f2f3f4;
+  background-image: url("../Assets/images/How_it_works_image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.paddinghd {
+  padding: 40px;
+}
+
+.cardList ul {
+  list-style: unset;
+}
+.cardList ul li {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+
+  color: rgba(255, 255, 255, 1);
+}
+.EnquireBtn {
+  background-color: #000 !important;
+  color: #fff !important;
+  padding: 0.5rem 4rem !important;
+  width: 16% !important;
+}
+.howWeWorkBox {
+  width: 100%;
+}
+.HowWeWorkCard {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.HowWeWorkContainer {
+  position: relative;
+}
+.TopDotImg {
+  position: absolute;
+  width: 28.7%;
+  top: 3%;
+  right: -4%;
+}
+.TopDotImg img {
+  width: 100%;
+  height: 100%;
+}
+.BottomTopImg {
+  position: absolute;
+  width: 21%;
+  bottom: 2%;
+  left: -3%;
+}
+.BottomTopImg img {
+  width: 100%;
+  height: 100%;
+}
+.paraForm {
+  color: black !important;
+  margin: 20px 0px;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+.Main_backendSupport_div_display {
+  width: 100%;
+  height: 25vh;
+  background: linear-gradient(
+      to right,
+      rgba(168, 167, 167, 0.1),
+      rgba(255, 255, 255, 0)
+    ),
+    #00000033;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  z-index: 8;
+  white-space: nowrap;
+}
+
+.imagegroup {
+  display: inline-block;
+  padding: 0;
+  margin-right: 20px; /* Adds space between the items */
+  list-style-type: none; /* Removes the default bullet for <ul> */
+}
+.Custom_imagee2 {
+    list-style-type: disc;
+    font-size: 36px;
+    font-weight: 600;
+    box-shadow: rgba(99, 99, 99, 0.2);
+    margin: 0;
+    padding: 20px 140px;
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: flex;
+  animation: scrollX 90s linear infinite; /* Adjust the time to control the speed */
+  align-items: center; /* Align items vertically in the center */
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1084px) {
+  .BESPOKE {
+    font-size: 30px;
+    line-height: 31px;
+    padding-top: 20px;
+    font-weight: 500;
+    text-align: left;
+  }
+  .HowitHD {
+    font-size: 26px;
+  }
+  button.btnExplore {
+    font-size: 20px;
+  }
+  .cardConatiner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    padding-top: 5%;
+  }
+  .cardHd {
+    font-size: 30px;
+  }
+  .cardPara {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .cardList ul li {
+    font-size: 23px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 727px) {
+  .BottomTopImg {
+    bottom: 0;
+    left: 0;
+  }
+  .TopDotImg {
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .BESPOKE {
+    font-size: 25px;
+    line-height: 31px;
+  }
+  .arrowImg {
+    width: 15%;
+    height: 15%;
+  }
+  button.btnExplore {
+    font-size: 17px;
+    width: 50% !important;
+  }
+  .exploreBox {
+    gap: 16px;
+  }
+
+  .cardPara {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .howWeWorkBox {
+    width: 100%;
+  }
+  .expertiesCard {
+    padding: 21px;
+    flex-direction: column;
+  }
+  .expertiesCardreverse {
+    padding: 21px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .BESPOKE {
+    font-size: 18px;
+    line-height: 29px;
+    text-align: left;
+    padding-top: 7px;
+  }
+  .cardPara {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .cardList {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .cardList ul li {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .cardHd {
+    font-size: 25px;
+    line-height: 29px;
+  }
+  .expertiesCard {
+    padding: 21px;
+    flex-direction: column;
+  }
+  .expertiesCardreverse {
+    padding: 21px;
+    flex-direction: column;
+  }
+  .exploreBox {
+    padding-top: 50px 0px;
+  }
+}

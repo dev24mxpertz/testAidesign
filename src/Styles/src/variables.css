@@ -1,0 +1,20 @@
+:root {
+    --heading-font: 'Helvetica-Bold';
+    --body-font: 'Helvetica';
+    /* colors */
+    --fill-color: #8C90E5;
+    --border-color: #000;
+    --highlight-color: #8C90E5;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('../../Font/HelveticaWorld-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: local('Helvetica Bold'), url('../../Font/HelveticaWorld-Bold.ttf') format('truetype');
+    font-weight: bold;
+}

@@ -1,0 +1,123 @@
+@import url('./src/variables.css');
+
+.t-c-bg {
+    padding: 50px 0;
+    background-size: cover;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../Assets/images/about-us-bg-section-3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: space-evenly;
+    /* / align-items: center; / */
+    width: 100%;
+    flex-direction: row;
+    color: white;
+}
+.t-c {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.t-c-lower {
+    font-size: 15px;
+    
+    text-align: left;
+    margin: 0px 0px;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 730px;
+}
+
+.t-c-lower dl dd {
+    font-weight: 300;
+    margin: 0;
+}
+.t-c-lower dl dd span {
+    font-family: var(--heading-font);
+    font-weight: bold;
+
+}
+
+/* .t-c-heading h1 {
+    font-size: 45px;
+    margin: 5px;
+    padding-top: 20px;
+} */
+.t-c-lower dl dt {
+    font-family: var(--heading-font);
+    font-weight: bold;
+
+    margin: 0;
+    padding: 10px 0px;
+}
+
+/* Privay Policy */
+
+
+/* Cookie policy */
+
+/*-------------------------Cookie---------------------------*/
+.Cookie-bg {
+    padding: 50px 0;
+    background-size: cover;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../Assets/images/about-us-bg-section-3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: space-evenly;
+    /* / align-items: center; / */
+    width: 100%;
+    flex-direction: row;
+    color: white;
+}
+.Cookie {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.Cookie-lower {
+    font-size: 15px;
+    text-align: left;
+    margin: 0px 0px;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 730px;
+}
+
+.Cookie-lower dl dd {
+    font-weight: 300;
+    margin: 0;
+}
+
+.Cookie-lower dl dd span {
+    font-family: var(--heading-font);
+    font-weight: bold;
+
+}
+
+.Cookie-lower dl dt {
+    font-family: var(--heading-font);
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0px;
+}
+
+.Cookie-heading h1 {
+    font-size: 45px;
+    margin: 5px;
+    padding-top: 20px;
+}

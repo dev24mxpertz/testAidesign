@@ -1,0 +1,258 @@
+@import url('../../Styles/src/variables.css');
+
+.dash_head_wrapper {
+    display: flex;
+}
+
+.ant-menu-item-selected{
+    background-color: #8C90E5 !important;
+    color: black !important;
+}
+
+.dash_head_wrapper>div {
+    background-color: var(--fill-color);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 12px 0;
+
+}
+
+.dash_head_wrapper>div>div {
+    border-radius: 0;
+    border-right: 1px solid var(--border-color);
+    margin: 0 10px;
+}
+
+.dash_head_wrapper>div>div:last-child {
+    border: none;
+}
+
+.number-card {
+    border-radius: 5px;
+    padding: 15px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+}
+
+.number-card>div>h5,
+.number-card>div>h2,
+.number-card>div p {
+    margin: 0px 0;
+}
+
+.number-card>div>h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.number-card>div>h5 {
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.number-card>div p {
+    display: block;
+    font-size: 15px;
+    font-weight: 300px;
+    color: black;
+}
+
+.number-card>div img {
+    height: 19px;
+    width: 19px;
+}
+
+/* chart-section */
+
+.chart-section-wrapper {
+    color: black !important;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    /* background-color: aliceblue; */
+}
+
+.paiChart-wrapper {
+    width: 100%;
+}
+
+.paiChart-wrapper>div {
+
+    border-radius: 12px;
+    height: 680px;
+    border: 1px solid var(--border-color);
+}
+
+.paiChart-wrapper>div>h1 {
+    font-family: var(--heading-font);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.paiChart-wrapper>div>p {
+    color: #8C90E5;
+    font-size: 14px;
+    font-weight: 300;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+
+}
+
+.ant-progress-text {
+    font-family: var(--heading-font);
+    font-size: 32px !important;
+    font-weight: bold !important;
+
+    color: black !important;
+}
+
+.Webinar-container>h5 {
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 25px 0px;
+    margin-bottom: 0;
+}
+
+.Webinar-container>h6 {
+    font: 400 17px var(--heading-font);
+    margin: 25px 0;
+}
+
+.Webinar-container>p {
+    font: 300 10px var(--body-font);
+
+
+}
+
+.Webinar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.Webinar-container>button {
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    color: #000;
+}
+
+.popular-episodes {
+    color: black !important;
+}
+
+.popular-episodes>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-episodes>div:first-child>button {
+    color: black;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.popular-episodes h2 {
+    font-weight: 300;
+    margin: 0;
+    font-size: 17px;
+}
+
+.popular-episodes-list>ul>a {
+    text-decoration: none;
+}
+
+.popular-episodes-list>ul>a>li {
+    display: flex;
+    padding: 10px 10px;
+    border: none;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+
+    align-items: center;
+    gap: 15px;
+}
+
+.popular-episodes-list>ul>a>li:hover {
+
+    background-color: #8C90E5 !important;
+
+}
+
+.popular-episodes-list>ul>a>li h1 {
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.popular-episodes-list>ul>a>li div span {
+    display: block;
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 5px 0 0 0;
+}
+
+/* ============ Settings ============ */
+
+
+
+.Setting_option_container {
+    /* border: 1px solid #828282; */
+    /* border-radius: 8px; */
+    /* padding: 17px 17px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.Setting_option_container>h2 {
+    font: var(--heading-font) 16px 700;
+}
+.Setting_option_container>ul {
+    padding: 0;
+}
+.Setting_option_container>ul>li {
+    margin:  15px 0 0 0;
+    display: flex;
+    background-color: #8C90E5;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border: 1px solid var(--border-color);
+
+    border-radius: 8px;
+}
+
+.Setting_option_container>ul>li>p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.Setting_option_container>ul>li>div {
+    width: 100%;
+    max-width: 100px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .dash_head_wrapper>div>div {
+        border: none;
+    }
+}

@@ -1,0 +1,349 @@
+@import url('../../Styles/src/variables.css');
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--fill-color);
+}
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--fill-color);
+}
+
+.employee-table th,
+.employee-table td {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  text-align: left;
+  min-width: 100px;
+}
+
+.employee-table th {
+  background-color: var(--fill-color);
+}
+
+.employee-table button {
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+  background: transparent;
+}
+
+.employee-table button:disabled {
+  background-color: var(--border-color);
+  cursor: default;
+}
+
+.employee-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.dashboard-btn {
+  width: 100%;
+  max-width: 148px;
+  height: 35px;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: 35px;
+  color: black;
+}
+
+.ant-spin-dot i{
+  background-color: white !important;
+}
+
+.employee-table>table {
+  width: 100%;
+  background-color: var(--fill-color);
+}
+
+.employee-table {
+  background-color: var(--fill-color);
+  color: black;
+}
+
+.add-new-input {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.add-popup {
+  padding: 0;
+  /* background-image: url('../../Assets/images/Dashboard.png'); */
+  width: 100% !important;
+  max-width: 1126px;
+  min-width: 350px;
+}
+
+.add-popup .ant-modal {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  pointer-events: none;
+  position: relative;
+  top: 100px;
+  width: auto;
+  max-width: calc(100vw - 32px);
+  padding-bottom: 24px;
+
+}
+
+.ant-modal-content {
+  height: auto;
+  /* background-image: url('../../Assets/images/add-employee-bg.png'); */
+  background-color: #b5b9ff !important;
+  opacity: 10px;
+  color: white;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: none;
+  background-clip: unset;
+  margin: 10px;
+}
+
+.popup-bg input::placeholder {
+  color: white;
+}
+
+.popup-bg {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-employee-form {
+  display: flex;
+  flex-direction: row;
+}
+.user-employee-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  width: 90%; 
+  /* max-width: 450px; */
+  height: 48px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  background: var(--fill-color);
+  color: black;
+  border-style: none;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.add-employee-avtar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ant-modal-close-x {
+  color: white;
+}
+
+.ant-modal-title{
+  padding: 5px;
+  color: white !important;
+  background-color: var(--fill-color);
+  border-radius: 20px 20px 0px 0px;
+  border: 1px solid var(--border-color);
+}
+.ant-modal-header{
+  background: none !important;
+}
+
+/* -------------------------------Compny-profile----------------------------- */
+
+
+.form-input-company {
+  width: 90%;
+  max-width: 450px;
+  height: 48px;
+  margin-bottom: 25px;
+  background: var(--fill-color);
+  color: black;
+  border-style: none;
+  padding: 10px;
+}
+
+.add-company-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.company-add{
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .add-employee-form {
+      flex-direction: column;
+  }
+  .add-employee-form>div:last-child {
+    align-items: start !important;
+    text-align: start !important;
+}
+}
+
+@media screen and (max-width: 450px){
+  .add-company-avatar{
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--fill-color);
+}
+
+.user-table th,
+.user-table td {
+  padding: 8px;
+  text-align: left;
+  min-width: 100px;
+}
+
+.user-table th {
+  background-color: var(--fill-color);
+}
+
+.user-table button {
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+  background: transparent;
+}
+
+.user-table button:disabled {
+  background-color: var(--border-color);
+  cursor: default;
+}
+
+.user-table tbody tr:nth-child(even) {
+  background-color: var(--table-row-even-color);
+}
+
+.user-table tbody tr:hover {
+  background-color: var(--table-row-hover-color);
+}
+
+.user-table th:first-child,
+.user-table td:first-child {
+  width: 30px;
+  text-align: start;
+}
+
+.user-table th:nth-child(2),
+.user-table td:nth-child(2) {
+  min-width: 150px;
+}
+
+@media screen and (max-width: 900px) {
+  .user-table th,
+  .user-table td {
+    padding: 8px 5px;
+  }
+
+  .user-table th:first-child,
+  .user-table td:first-child {
+    width: 30px;
+  }
+
+  .user-table th:nth-child(2),
+  .user-table td:nth-child(2) {
+    min-width: 120px;
+  }
+
+  .user-table button {
+    padding: 3px 6px;
+    margin-right: 3px;
+  }
+}
+
+/* CSS for User Details component */
+.user-details {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+
+}
+
+.form-input-user {
+  width: 90%;
+  max-width: 450px;
+  height: 48px;
+  margin-bottom: 25px;
+  background: var(--fill-color);
+  color: white;
+  border-style: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.user-details .user-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.user-details-form {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 900px) {
+  .user-details .user-details-form {
+    flex-direction: column;
+  }
+  .user-details .user-details-form > div:last-child {
+    align-items: start !important;
+    text-align: start !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .user-details .user-avatar {
+    flex-direction: column;
+    width: 100%;
+  }
+}

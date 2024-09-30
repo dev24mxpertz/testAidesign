@@ -1,0 +1,241 @@
+@import url('../../Styles/src/variables.css');
+
+.dashbord-bg {
+    background-image: url('../../Assets/images/Dashboard.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.dashbord-bg>div .ant-layout {
+    background: transparent !important;
+}
+
+.Headedr_wrapper {
+    /* padding: 20px 20px; */
+    display: flex;
+    padding: 15px;
+    color: black;
+    justify-content: space-around;
+    align-items: center;
+
+    /* background-color: aliceblue !important; */
+    height: 200px;
+}
+
+.Logo_header>h4 {
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: black;
+}
+
+.Header_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.search-bar {
+    width: 100%;
+    display: flex !important;
+}
+
+.search-bar>div {
+    width: 500px;
+    align-items: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.search-bar input {
+    display: block;
+    width: 100%;
+    max-width: 400px !important;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 0;
+    border: none;
+    background-color: var(--fill-color) !important;
+    color: black;
+    /* box-shadow: none; */
+}
+
+.search-bar input::placeholder {
+    color: black;
+}
+
+.User_wrapper {
+    width: 100%;
+    padding: 0 23px;
+}
+
+.User_wrapper h2 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar button {
+    margin: 0 0 0 20px;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 50px;
+    padding: 10px 35px;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.User_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.dash-slider {
+    position: unset;
+    transition: all 5s ease-in-out;
+}
+
+.dash-slider>.ant-layout-sider-trigger {
+    background: transparent;
+    display: none;
+}
+
+.dash-slider ul>li.ant-menu-item-selected {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.dash-slider>div:first-child {
+    /* display: flex; */
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+
+.dash-slider ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    margin: 0;
+    width: -webkit-fill-available !important;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.header-search-bar .ant-input-outlined {
+    background-color: var(--fill-color);
+    color: black;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 40px !important;
+    width: 340px !important;
+    margin-right: 40px;
+}
+
+.header-search-bar .ant-input-outlined input::placeholder {
+    color: black;
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+.dash-head {
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.header-search-bar .ant-input-outlined:hover {
+    color: black;
+    background-color: var(--fill-color) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.header-search-bar .ant-btn {
+    width: 148px;
+    height: 40px;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 35px !important;
+    color: black;
+}
+
+.header-search-bar .ant-btn:hover {
+    width: 148px;
+    height: 40px;
+    background: var(--fill-color) !important;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 35px !important;
+    color: black;
+}
+
+@media screen and (max-width: 1150px) {
+
+    .header-search-bar {
+        display: none;
+    }
+
+    .dashboard-header {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .dash-slider {
+        position: absolute !important;
+        top: 0;
+        height: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
+        background-color: var(--fill-color) !important;
+        z-index: 1000;
+    }
+
+    .dash-slider>.ant-layout-sider-trigger {
+        background: transparent;
+        display: block !important;
+    }
+
+    .toggle-sider{
+        background: currentColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 38px;
+    }
+    .toggle-sider>span {
+        color: black;
+    }
+    .Logo_header>h4{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 455px){
+
+    .header-avtar {
+        display: none !important;
+    }
+    .header-align{
+        margin-top: 25px;
+    }
+}

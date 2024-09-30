@@ -1,0 +1,59 @@
+@import url('../../Styles/src/variables.css');
+
+.subscription-info {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color:var(--fill-color);
+    flex-direction: row;
+}
+
+.subscription-details {
+    margin-bottom: 10px;
+}
+
+.payment-lower tbody tr td {
+
+    border: none;
+
+    background-color: transparent;
+    color: black;
+}
+.payment-uper tbody tr td {
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+
+.payment-uper{
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+    padding: 15px;
+    background-color: var(--fill-color);
+}
+.payment-lower{
+    border: 1px solid var(--border-color);
+
+    border-radius: 9px;
+    padding: 15px;
+    width: 100%;
+    max-width: 750px;
+    background-color:var(--fill-color);
+}
+
+.payment-heading>h3{
+    font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 767px){
+    .subscription-info{
+        flex-direction: column;
+    }
+}
+
+.payment-heading{
+    color: black;
+}

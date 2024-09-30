@@ -1,0 +1,50 @@
+.ecommerce {
+    margin-top: 110px;
+}
+
+.ecommerce-Slider-wrapper {
+    padding: 81px 50px 40px 50px;
+    width: 100%;
+    background: url('../Assets/images/ecoommerce.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    margin-top: 60px;
+}
+
+.ecommerce-slider-home-s-2 {
+    background: url('../Assets/images/ecommerces1-img-2.png');
+    height: 182px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 5px 8px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ======================================================ecommerce-s2========================================================== */
+
+.ecommerce-s2 {
+    padding: 100px;
+    align-items: center;
+    text-align: center;
+}
+
+.ecommerce-s2-heading {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+}
+
+.ecommerce-s2-sub-heading {
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: .01em;
+    line-height: 32px;
+    margin: 35px auto;
+    width: 100%;
+    max-width: 70%;
+}
