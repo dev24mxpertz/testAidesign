@@ -29,26 +29,26 @@ const HeroComponent = () => {
     }
   };
 
-  // useEffect(() => {
-  //   SpellAnimationRefs.current.forEach((slide) => {
-  //     const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: slide,
-  //         start: "top 75%",
-  //         toggleActions: "play none none reverse",
-  //       },
-  //     });
+  useEffect(() => {
+    SpellAnimationRefs.current.forEach((slide) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: slide,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      });
 
-  //     // Apply the same animation to all child elements of each slide
-  //     Array.from(slide.children).forEach((child) => {
-  //       tl.fromTo(
-  //         child,
-  //         { y: -20, opacity: 0 },
-  //         { y: 0, opacity: 1, duration: 0.4 }
-  //       );
-  //     });
-  //   });
-  // }, []);
+      // Apply the same animation to all child elements of each slide
+      Array.from(slide.children).forEach((child) => {
+        tl.fromTo(
+          child,
+          { y: -20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.4 }
+        );
+      });
+    });
+  }, []);
 
   //old usseffect
 
@@ -224,7 +224,7 @@ const HeroComponent = () => {
         stop: "top top",
 
         pin: true,
-        pinSpacing:false,
+        pinSpacing: false,
       },
     });
 
@@ -235,15 +235,27 @@ const HeroComponent = () => {
       scrollTrigger: {
         trigger: ".HeroComponent_component2_paradiv",
         scale: 0.2,
-
         duration: 1,
       },
     });
-
-
-   
-
   });
+
+  const componentThreeRef = useRef(null);
+
+    useGSAP(() => {
+      gsap.from(".HeroComponent_component3", {
+        scrollTrigger: {
+          trigger: ".HeroComponent_component2_box_main",
+          stop: "top top",
+
+          pin: true,
+          pinSpacing: false,
+        },
+      });
+
+    });
+
+
 
   return (
     <div className="HeroComponent_main">
@@ -333,10 +345,10 @@ const HeroComponent = () => {
         <div className="padding_20">
           <div
             className="HeroComponent_component2"
-            style={{ height: "1000px" }}
-            // ref={(el) => {
-            //   addToRefs(el);
-            // }}
+            style={{ height: "900px" }}
+            ref={(el) => {
+              SpellAnimationRefsaddToRefs(el);
+            }}
           >
             <div className="HeroComponent_component2_paradiv">
               <p>
@@ -345,7 +357,7 @@ const HeroComponent = () => {
                 businesses by reducing workload and boosting productivity
               </p>
             </div>
-            {/* <h3 className="HeroComponent_component2_h3 orange_color">
+            <h3 className="HeroComponent_component2_h3 orange_color">
               OUR SERVICES
             </h3>
             <h2 className="HeroComponent_component2_h2">
@@ -373,76 +385,78 @@ const HeroComponent = () => {
                   productivity.
                 </p>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
-
-        {/* <div className="HeroComponent_component3">
-          <div className="padding_20_20">
-            <h2 className="HeroComponent_component3_h2">
-              CUSTOM <span className="orange_color">AI SOLUTIONS </span>TO
-              STREAMLINE BACK-END BUSINESS OPERATIONS
-            </h2>
-            <p className="HeroComponent_component3_p">
-              Our tailored AI solutions optimize back-end processes through
-              consultation, development, and ongoing support. Achieve seamless
-              integration and long-term operational efficiency
-            </p>
-            <div className="HeroComponent_component3_box_div">
-              <div className="HeroComponent_component3_box_img_div">
-                <img src={herocomp3img} alt="heroimgage" />
-              </div>
-              <div className="HeroComponent_component3_box_content">
-                <h3 className="HeroComponent_component3_box_content_h3">
-                  AI-Driven Customer Support: Transforming Frontend Engagement
-                </h3>
-                <p className="HeroComponent_component3_box_content_p">
-                  Automate over 90% of digital customer support with AI tools.
-                  Deliver efficient, 24/7 service while reducing workload and
-                  enhancing user experience.
-                </p>
-                <button className="HeroComponent_component3_box_content_button">
-                  LEARN MORE
-                </button>
-              </div>
+      </div>
+      <div ref={componentThreeRef} className="HeroComponent_component3">
+        <div className="padding_20_20" ref={SpellAnimationRefsaddToRefs}>
+          <h2 className="HeroComponent_component3_h2">
+            CUSTOM <span className="orange_color">AI SOLUTIONS </span>TO
+            STREAMLINE BACK-END BUSINESS OPERATIONS
+          </h2>
+          <p className="HeroComponent_component3_p">
+            Our tailored AI solutions optimize back-end processes through
+            consultation, development, and ongoing support. Achieve seamless
+            integration and long-term operational efficiency
+          </p>
+          <div className="HeroComponent_component3_box_div">
+            <div className="HeroComponent_component3_box_img_div">
+              <img src={herocomp3img} alt="heroimgage" />
             </div>
-            <div className="HeroComponent_component3_box_div">
-              <div className="HeroComponent_component3_box_content">
-                <h3 className="HeroComponent_component3_box_content_h3">
-                  AI-Driven Customer Support: Transforming Frontend Engagement
-                </h3>
-                <p className="HeroComponent_component3_box_content_p">
-                  Automate over 90% of digital customer support with AI tools.
-                  Deliver efficient, 24/7 service while reducing workload and
-                  enhancing user experience.
-                </p>
-                <button className="HeroComponent_component3_box_content_button">
-                  LEARN MORE
-                </button>
-              </div>
-              <div className="HeroComponent_component3_box_img_div">
-                <img src={herocomp3img} alt="heroimgage" />
-              </div>
-            </div>
-          </div>
-          <div className="HeroComponent_component4">
-            <div className="HeroComponent_component4_content_div">
-              <h1 className="HeroComponent_component4_h1">
-                Elevate Efficiency and Growth with{" "}
-                <span className="orange_color">Intelligent Solutions</span>
-              </h1>
-              <p className="HeroComponent_component4_p">
-                Streamline operations, reduce costs, and boost productivity with
-                Altus solutions. Automate processes to manage growth, foster
-                innovation, and maintain high quality, ensuring long-term
-                success and a more engaged workforce.
+            <div className="HeroComponent_component3_box_content">
+              <h3 className="HeroComponent_component3_box_content_h3">
+                AI-Driven Customer Support: Transforming Frontend Engagement
+              </h3>
+              <p className="HeroComponent_component3_box_content_p">
+                Automate over 90% of digital customer support with AI tools.
+                Deliver efficient, 24/7 service while reducing workload and
+                enhancing user experience.
               </p>
-            </div>
-            <div className="HeroComponent_component4_image_div">
-              <img src={lastboximage1} alt="lastboximage1" />
+              <button className="HeroComponent_component3_box_content_button">
+                LEARN MORE
+              </button>
             </div>
           </div>
-        </div> */}
+          <div className="HeroComponent_component3_box_div">
+            <div className="HeroComponent_component3_box_content">
+              <h3 className="HeroComponent_component3_box_content_h3">
+                AI-Driven Customer Support: Transforming Frontend Engagement
+              </h3>
+              <p className="HeroComponent_component3_box_content_p">
+                Automate over 90% of digital customer support with AI tools.
+                Deliver efficient, 24/7 service while reducing workload and
+                enhancing user experience.
+              </p>
+              <button className="HeroComponent_component3_box_content_button">
+                LEARN MORE
+              </button>
+            </div>
+            <div className="HeroComponent_component3_box_img_div">
+              <img src={herocomp3img} alt="heroimgage" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="HeroComponent_component4"
+        ref={SpellAnimationRefsaddToRefs}
+      >
+        <div className="HeroComponent_component4_content_div">
+          <h1 className="HeroComponent_component4_h1">
+            Elevate Efficiency and Growth with{" "}
+            <span className="orange_color">Intelligent Solutions</span>
+          </h1>
+          <p className="HeroComponent_component4_p">
+            Streamline operations, reduce costs, and boost productivity with
+            Altus solutions. Automate processes to manage growth, foster
+            innovation, and maintain high quality, ensuring long-term success
+            and a more engaged workforce.
+          </p>
+        </div>
+        <div className="HeroComponent_component4_image_div">
+          <img src={lastboximage1} alt="lastboximage1" />
+        </div>
       </div>
     </div>
   );
