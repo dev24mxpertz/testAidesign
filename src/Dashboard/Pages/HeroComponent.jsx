@@ -20,14 +20,6 @@ const HeroComponent = () => {
     }
   };
 
-  const slideRefs = useRef([]);
-  slideRefs.current = [];
-
-  const addToRefs = (el) => {
-    if (el && !slideRefs.current.includes(el)) {
-      slideRefs.current.push(el);
-    }
-  };
 
   useEffect(() => {
     SpellAnimationRefs.current.forEach((slide) => {
@@ -51,6 +43,15 @@ const HeroComponent = () => {
   }, []);
 
   //old usseffect
+
+    // const slideRefs = useRef([]);
+    // slideRefs.current = [];
+
+    // const addToRefs = (el) => {
+    //   if (el && !slideRefs.current.includes(el)) {
+    //     slideRefs.current.push(el);
+    //   }
+    // };
 
   // useEffect(() => {
   //   const tl = gsap.timeline({
@@ -345,7 +346,7 @@ const HeroComponent = () => {
         <div className="padding_20">
           <div
             className="HeroComponent_component2"
-            style={{ height: "900px" }}
+            // style={{ height: "900px" }}
             ref={(el) => {
               SpellAnimationRefsaddToRefs(el);
             }}
