@@ -20,7 +20,6 @@ const HeroComponent = () => {
     }
   };
 
-
   useEffect(() => {
     SpellAnimationRefs.current.forEach((slide) => {
       const tl = gsap.timeline({
@@ -44,14 +43,14 @@ const HeroComponent = () => {
 
   //old usseffect
 
-    // const slideRefs = useRef([]);
-    // slideRefs.current = [];
+  // const slideRefs = useRef([]);
+  // slideRefs.current = [];
 
-    // const addToRefs = (el) => {
-    //   if (el && !slideRefs.current.includes(el)) {
-    //     slideRefs.current.push(el);
-    //   }
-    // };
+  // const addToRefs = (el) => {
+  //   if (el && !slideRefs.current.includes(el)) {
+  //     slideRefs.current.push(el);
+  //   }
+  // };
 
   // useEffect(() => {
   //   const tl = gsap.timeline({
@@ -243,18 +242,109 @@ const HeroComponent = () => {
 
   const componentThreeRef = useRef(null);
 
-    useGSAP(() => {
-      gsap.from(".HeroComponent_component3", {
-        scrollTrigger: {
-          trigger: ".HeroComponent_component2_box_main",
-          stop: "top top",
-
-          pin: true,
-          pinSpacing: false,
-        },
-      });
-
+  useGSAP(() => {
+    gsap.from(".HeroComponent_component3", {
+      scrollTrigger: {
+        trigger: ".HeroComponent_component2_box_main",
+        stop: "top top",
+        pin: true,
+        pinSpacing: false,
+      },
     });
+  });
+
+const componentLeftSlideRef = useRef(null);
+
+useGSAP(() => {
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".HeroComponent_component3_p", // Trigger when this element is in view
+      start: "top 80%", // Adjust based on when you want the animation to start
+      toggleActions: "play none none reverse", // Controls the play and reverse actions
+    },
+  });
+
+  // Animate the image div
+  tl.fromTo(
+    ".HeroComponent_component3_box_img_div",
+    { width: 0, opacity: 0 }, // Start state: width 0 and fully transparent
+    {
+      width: "45%", // End state: full width (adjust the width as necessary)
+      opacity: 1, // End state: fully visible
+      duration: 1.5, // Adjust duration as needed
+      ease: "ease.out", // Optional easing for a smooth animation
+    }
+  )
+  tl.fromTo(
+    ".HeroComponent_component3_box_content",
+    { width: 0,opacity:0}, // Start state: width 0 and fully transparent
+    {
+      width: "45%", // End state: full width
+      duration: 1.5, // Adjust duration as needed
+      ease: "ease.out", // Optional easing for a smooth animation
+    },
+    // "-=0.5" // Overlap by 1 second to make the animations more seamless
+  );
+   tl.fromTo(
+     ".HeroComponent_component3_box_content",
+     { opacity: 0 }, // Start state: width 0 and fully transparent
+     {
+       opacity: 1, // End state: fully visible
+       duration: 2, // Adjust duration as needed
+       ease: "ease.out", // Optional easing for a smooth animation
+     },
+     "-=0.3" // Overlap by 1 second to make the animations more seamless
+   );
+});
+
+const componentRightSlideRef = useRef(null);
+
+useGSAP(() => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".HeroComponent_component3_box_content", // Trigger the animation when this element comes into view
+      start: "top 70%", // Start the animation when the top of the element is 80% from the top of the viewport
+      toggleActions: "play none none reverse", // Animation will reverse when scrolling back up
+    },
+  });
+
+  // Animate the content div from right to left, slightly overlapping the image
+  tl.fromTo(
+    ".HeroComponent_component3_box_content2",
+    { width: 0, opacity: 0 }, // Start state: width 0 and fully transparent
+    {
+      width: "45%", // End state: full width (adjust as needed)
+      opacity: 0, // End state: fully visible
+      duration: 1.5, // Adjust duration as necessary
+      ease: "ease.out", // Easing for smooth animation
+    },
+  );
+
+    tl.fromTo(
+      ".HeroComponent_component3_box_content2",
+      {  opacity: 0 }, // Start state: width 0 and fully transparent
+      {
+        opacity: 1, // End state: fully visible
+        duration: 1.5, // Adjust duration as necessary
+        ease: "ease.out", // Easing for smooth animation
+      },
+
+    );
+
+  // Animate the image div from right to left
+  tl.fromTo(
+    ".HeroComponent_component3_box_img_div2",
+    { width: 0, opacity: 0 }, // Start state: width 0 and fully transparent
+    {
+      width: "45%", // End state: full width (adjust width as needed)
+      opacity: 1, // End state: fully visible
+      duration: 1.5, // Adjust duration for smoother animation
+      ease: "ease.out", // Smooth easing for the animation
+    },
+    "-=1" // Overlap the content animation with the image by 1 second for a seamless transition
+  );
+});
+
 
 
 
@@ -391,7 +481,10 @@ const HeroComponent = () => {
         </div>
       </div>
       <div ref={componentThreeRef} className="HeroComponent_component3">
-        <div className="padding_20_20" ref={SpellAnimationRefsaddToRefs}>
+        <div
+          className="padding_20_20"
+          // ref={SpellAnimationRefsaddToRefs}
+        >
           <h2 className="HeroComponent_component3_h2">
             CUSTOM <span className="orange_color">AI SOLUTIONS </span>TO
             STREAMLINE BACK-END BUSINESS OPERATIONS
@@ -402,10 +495,16 @@ const HeroComponent = () => {
             integration and long-term operational efficiency
           </p>
           <div className="HeroComponent_component3_box_div">
-            <div className="HeroComponent_component3_box_img_div">
+            <div
+              ref={componentLeftSlideRef}
+              className="HeroComponent_component3_box_img_div"
+            >
               <img src={herocomp3img} alt="heroimgage" />
             </div>
-            <div className="HeroComponent_component3_box_content">
+            <div
+              ref={componentLeftSlideRef}
+              className="HeroComponent_component3_box_content"
+            >
               <h3 className="HeroComponent_component3_box_content_h3">
                 AI-Driven Customer Support: Transforming Frontend Engagement
               </h3>
@@ -419,8 +518,11 @@ const HeroComponent = () => {
               </button>
             </div>
           </div>
-          <div className="HeroComponent_component3_box_div">
-            <div className="HeroComponent_component3_box_content">
+          <div
+            ref={componentRightSlideRef}
+            className="HeroComponent_component3_box_div2"
+          >
+            <div className="HeroComponent_component3_box_content2">
               <h3 className="HeroComponent_component3_box_content_h3">
                 AI-Driven Customer Support: Transforming Frontend Engagement
               </h3>
@@ -433,7 +535,7 @@ const HeroComponent = () => {
                 LEARN MORE
               </button>
             </div>
-            <div className="HeroComponent_component3_box_img_div">
+            <div className="HeroComponent_component3_box_img_div2">
               <img src={herocomp3img} alt="heroimgage" />
             </div>
           </div>

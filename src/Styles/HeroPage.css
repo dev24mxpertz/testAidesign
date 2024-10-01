@@ -222,8 +222,19 @@
 
 .HeroComponent_component3_box_div {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  margin: 60px 0px;
+  height: 70vh;
+}
+
+.HeroComponent_component3_box_div2 {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-end;
   width: 100%;
   background-color: white;
   padding: 20px;
@@ -233,6 +244,13 @@
 
 .HeroComponent_component3_box_img_div {
   width: 45%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.HeroComponent_component3_box_img_div2{
+    width: 45%;
   height: 100%;
   border-radius: 30px;
   overflow: hidden;
@@ -250,6 +268,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0px 60px;
+}
+
+
+.HeroComponent_component3_box_content2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 60px;
 }
 
 .HeroComponent_component3_box_content_h3 {
@@ -379,6 +408,18 @@
 
   .HeroComponent_component3_box_div {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0px;
+    height: initial;
+  }
+
+  .HeroComponent_component3_box_div2{
+        display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
